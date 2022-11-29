@@ -9,6 +9,6 @@ public class PlatformSensor : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Ground ground))
-            _plaform.RotateMoving();
+            _plaform.ChangeDirection();
     }
 }

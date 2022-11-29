@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MainMirror : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private Transform _positionForFirst;
     [SerializeField] private Transform _positionForSecond;
     [SerializeField] private GameObject _second;
@@ -14,6 +15,7 @@ public class MainMirror : MonoBehaviour
         {
             if (player.IsTeleportedNow == false)
             {
+                _audioSource.Play();
                 _second.SetActive(true);
                 _second.GetComponent<Player>().SetBoolIsTeleportedNow(true);
                 player.SetBoolIsTeleportedNow(true);

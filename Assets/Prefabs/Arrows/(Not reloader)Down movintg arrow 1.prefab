@@ -101,11 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 7216279701182955332}
+  _direction: {x: 0, y: -1}
+  _rotation: {x: 0, y: 0, z: -90}
   _speed: 15
-  _isRight: 0
-  _isUp: 0
-  _isMovingOnXDirection: 0
-  _isMovingOnYDirection: 1
 --- !u!61 &7216279701182955335
 BoxCollider2D:
   m_ObjectHideFlags: 0

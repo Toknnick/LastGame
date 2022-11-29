@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Carrier : ObjectPool
@@ -6,26 +7,34 @@ public class Carrier : ObjectPool
     [SerializeField] private GameObject _web;
     [SerializeField] private Transform _spawnPoint;
 
-    private float _timeForSpawn = 1;
-    private float _nowTimeForSpawnWeb;
+    private WaitForSeconds _timer  = new WaitForSeconds(1);
 
     private void Start()
     {
         Initialize(_web);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        _nowTimeForSpawnWeb += Time.deltaTime;
+        StartCoroutine(Spawn());
+    }
 
-        if (_timeForSpawn <= _nowTimeForSpawnWeb)
+    private void OnDisable()
+    {
+        StopCoroutine(Spawn());
+    }
+
+    private IEnumerator Spawn()
+    {
+        while (true)
         {
             if (TryGetObject(out GameObject web))
             {
-                _nowTimeForSpawnWeb = 0;
                 web.SetActive(true);
                 web.transform.position = _spawnPoint.position;
             }
+
+            yield return _timer;
         }
     }
 }

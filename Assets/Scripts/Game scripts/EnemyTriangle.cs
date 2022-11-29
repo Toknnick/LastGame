@@ -1,6 +1,9 @@
+using System;
 using UnityEngine;
 public class EnemyTriangle : MonoBehaviour
 {
+    public Action<bool> OnSwitchedState;
+
     [SerializeField] private int _speed = 5;
     [Header("-1 = left, 1 = right")]  
     [SerializeField] private int _movingSide = -1;
@@ -15,7 +18,6 @@ public class EnemyTriangle : MonoBehaviour
     {
         if (isTurnOn == false)
         {
-            enabled = false; 
             _animator.enabled = false;
             _rigidbody2D.Sleep();
             _spriteRenderer.enabled = false;
@@ -23,7 +25,6 @@ public class EnemyTriangle : MonoBehaviour
         }
         else
         {
-            enabled = true;
             _animator.enabled = true;
             _rigidbody2D.WakeUp();
             _spriteRenderer.enabled = true;
@@ -40,7 +41,17 @@ public class EnemyTriangle : MonoBehaviour
             _movingSide = 1;
     }
 
-    void FixedUpdate()
+    private void OnEnable()
+    {
+        OnSwitchedState += SwitchState;
+    }
+
+    private void OnDisable()
+    {
+        OnSwitchedState -= SwitchState;
+    }
+
+    private void FixedUpdate()
     {
         _rigidbody2D.velocity = new Vector2(_movingSide * _speed, _rigidbody2D.velocity.y);
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Jumper : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private int _jumpForce;
 
     private Animator _animator;
@@ -14,8 +15,9 @@ public class Jumper : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Rigidbody2D rigidbody2D))
+        if (collision.gameObject.TryGetComponent(out Rigidbody2D rigidbody2D) && collision.gameObject.TryGetComponent(out Player player))
         {
+            _audioSource.Play();
             _animator.SetBool("Jumped",true);
             rigidbody2D.AddForce(Vector2.up * _jumpForce);
         }

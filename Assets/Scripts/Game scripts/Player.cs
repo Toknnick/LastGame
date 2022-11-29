@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -22,23 +20,18 @@ public class Player : MonoBehaviour
         return result;
     }
 
-    public void GetKey()
-    {
-        _countOfKeys++;
-    }
-
     public void SetBoolIsTeleportedNow(bool value)
     {
         IsTeleportedNow = value;
     }
 
-    public void SetNewSpawnPoint(Transform newSpawnPoint)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        _spawnPoint = newSpawnPoint;
-    }
-
-    public void Die()
-    {
-        transform.position = _spawnPoint.position;
+        if (collision.gameObject.TryGetComponent(out Key key))
+            _countOfKeys++;
+        else if (collision.gameObject.TryGetComponent(out SetterNewSpawnPoint setterNewSpawnPoint))
+            _spawnPoint = setterNewSpawnPoint.transform;
+        else if(collision.gameObject.TryGetComponent(out DeathZone deathZone))
+            transform.position = _spawnPoint.position;
     }
 }

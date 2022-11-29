@@ -3097,11 +3097,11 @@ PrefabInstance:
       objectReference: {fileID: 118134145122163559}
     - target: {fileID: 6878678702875104412, guid: 28ddbcdf933c4004d981dc5f0f8d6ad4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.46
+      value: 9.21
       objectReference: {fileID: 0}
     - target: {fileID: 6878678702875104412, guid: 28ddbcdf933c4004d981dc5f0f8d6ad4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.29
+      value: -3.32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ddbcdf933c4004d981dc5f0f8d6ad4, type: 3}

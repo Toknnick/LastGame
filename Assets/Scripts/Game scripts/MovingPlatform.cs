@@ -6,12 +6,9 @@ public class MovingPlatform : MonoBehaviour
     [Header("-1 = left, 1 = right")]
     [SerializeField] private int _movingSide = -1;
 
-    public void RotateMoving()
+    public void ChangeDirection()
     {
-        if (_movingSide == 1)
-            _movingSide = -1;
-        else
-            _movingSide = 1;
+        _movingSide *= -1;
     }
 
     void Update()

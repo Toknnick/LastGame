@@ -8,6 +8,10 @@ public class WakeUpZoneOfEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _bodyOfEnemyTriangle.SwitchState(true);
+        if (_bodyOfEnemyTriangle.enabled == false)
+        {
+            _bodyOfEnemyTriangle.enabled = true;
+            _bodyOfEnemyTriangle.OnSwitchedState(true);
+        }
     }
 }
