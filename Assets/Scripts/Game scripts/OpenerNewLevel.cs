@@ -7,14 +7,14 @@ public class OpenerNewLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerPrefs.SetInt("CountOfOpenLevels", LevelManager.CountOfOpenLevels);
+        PlayerPrefs.SetInt("CountOfOpenLevels", SaverParametrs.CountOfOpenLevels);
 
         if (SceneManager.GetActiveScene().buildIndex != _maxLevels)
         {
-            if (SceneManager.GetActiveScene().buildIndex == LevelManager.CountOfOpenLevels)
+            if (SceneManager.GetActiveScene().buildIndex == SaverParametrs.CountOfOpenLevels)
                 if (SceneManager.GetActiveScene().buildIndex != 30)
-                    LevelManager.CountOfOpenLevels = SceneManager.GetActiveScene().buildIndex + 1;
-
+                    SaverParametrs.CountOfOpenLevels = SceneManager.GetActiveScene().buildIndex + 1;
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else

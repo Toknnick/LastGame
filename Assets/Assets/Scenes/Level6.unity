@@ -666,7 +666,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab196df6807010548a6c800891b49379, type: 3}
 --- !u!114 &637383495 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 955746846327095583, guid: ab196df6807010548a6c800891b49379, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7195266850128211182, guid: ab196df6807010548a6c800891b49379, type: 3}
   m_PrefabInstance: {fileID: 637383494}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1140,7 +1140,7 @@ PrefabInstance:
     - target: {fileID: 288076567686459200, guid: 28ddbcdf933c4004d981dc5f0f8d6ad4, type: 3}
       propertyPath: _joystick
       value: 
-      objectReference: {fileID: 637383495}
+      objectReference: {fileID: 0}
     - target: {fileID: 288076567686459201, guid: 28ddbcdf933c4004d981dc5f0f8d6ad4, type: 3}
       propertyPath: m_Name
       value: Player

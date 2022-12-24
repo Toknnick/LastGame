@@ -25,8 +25,8 @@ public class UIManager : MonoBehaviour
 
     public void ExitFromLevel()
     {
-        PlayerPrefs.SetInt("CountOfOpenLevels", LevelManager.CountOfOpenLevels);
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("CountOfOpenLevels", SaverParametrs.CountOfOpenLevels);
         SceneManager.LoadScene(0);
     }
 }

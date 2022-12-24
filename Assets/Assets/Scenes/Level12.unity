@@ -311,7 +311,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab196df6807010548a6c800891b49379, type: 3}
 --- !u!114 &41841538 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 955746846327095583, guid: ab196df6807010548a6c800891b49379, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7195266850128211182, guid: ab196df6807010548a6c800891b49379, type: 3}
   m_PrefabInstance: {fileID: 41841537}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3197,7 +3197,7 @@ PrefabInstance:
     - target: {fileID: 4723961360736744413, guid: d4b89fba9b6df0c4c890be9030c70a50, type: 3}
       propertyPath: _joystick
       value: 
-      objectReference: {fileID: 41841538}
+      objectReference: {fileID: 0}
     - target: {fileID: 5592840761470009941, guid: d4b89fba9b6df0c4c890be9030c70a50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1400003
@@ -8478,7 +8478,7 @@ PrefabInstance:
     - target: {fileID: 4723961360736744413, guid: d4b89fba9b6df0c4c890be9030c70a50, type: 3}
       propertyPath: _joystick
       value: 
-      objectReference: {fileID: 41841538}
+      objectReference: {fileID: 0}
     - target: {fileID: 5592840761470009941, guid: d4b89fba9b6df0c4c890be9030c70a50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1259

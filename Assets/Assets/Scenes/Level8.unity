@@ -972,6 +972,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 30.090027
       objectReference: {fileID: 0}
+    - target: {fileID: 118134146839456901, guid: ab196df6807010548a6c800891b49379, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.4000244
+      objectReference: {fileID: 0}
     - target: {fileID: 118134146901268266, guid: ab196df6807010548a6c800891b49379, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1084,7 +1088,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab196df6807010548a6c800891b49379, type: 3}
 --- !u!114 &928747108 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 955746846327095583, guid: ab196df6807010548a6c800891b49379, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7195266850128211182, guid: ab196df6807010548a6c800891b49379, type: 3}
   m_PrefabInstance: {fileID: 928747107}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
